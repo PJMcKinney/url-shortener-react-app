@@ -18,17 +18,20 @@ const LongUrlEntry = () => {
   };
 
   return (
-    <div className="content">
-      <form onSubmit={handleEnterLongUrlSubmit}>
-        <label>Enter URL to be shortened:</label>
-        <input
-          type="url"
-          required
-          value={longURL}
-          onChange={(e) => setLongURL(e.target.value)}
-        />
-        <button>Convert to Shortened URL</button>
-      </form>
+    <div className="longUrlEntry">
+      <div className="longUrlContent">
+        <form onSubmit={handleEnterLongUrlSubmit}>
+          <input
+            placeholder="Enter URL to be shortened"
+            type="url"
+            required
+            value={longURL}
+            onChange={(e) => setLongURL(e.target.value)}
+          />
+          <button>Convert to Shortened URL</button>
+        </form>
+      </div>
+
       <p>http://localhost:8080/url/{shortURL}</p>
     </div>
   );

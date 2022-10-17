@@ -1,13 +1,143 @@
-body {
-  margin: 50;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Roboto";
+  color: #fffffe;
+  background-color: #004643;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid grey;
+}
+
+.navbar h1 {
+  color: #fffffe;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  background-color: #f9bc60;
+  border: 2px solid #001e1d;
+  border-radius: 5px;
+  color: #001e1d;
+}
+
+.navbar a:hover {
+  color: #fffffe;
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.content button {
+  background-color: #f9bc60;
+  color: #001e1d;
+  border-color: #001e1d;
+  border-radius: 5px;
+}
+
+.longUrlEntry {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #abd1c6;
+  border-radius: 5px;
+  border: 2px solid #001e1d;
+}
+
+.longUrlEntry p {
+  background-color: #fffffe;
+  margin-inline: 100px;
+  text-align: center;
+  color: #001e1d;
+  border-radius: 5px;
+  border: 2px solid #001e1d;
+}
+
+.longUrlEntry form {
+  background-color: #abd1c6;
+  content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.longUrlEntry form input {
+  background-color: #fffffe;
+  border-radius: 5px;
+  border-color: #001e1d;
+  content: center;
+  padding: 5px;
+  width: 100%;
+  color: #001e1d;
+}
+
+.longUrlEntry form button {
+  margin-left: auto;
+}
+
+.viewAllEntries {
+  padding: 20px;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.viewAllEntries .header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid grey;
+}
+
+.viewAllEntries .header .allEntriesButton {
+  margin-left: auto;
+}
+
+.entry-preview {
+  padding: 10px 16px;
+  margin: 10px 0;
+  border: 2px solid #001e1d;
+  border-radius: 5px;
+  background-color: #abd1c6;
+}
+
+.entry-preview p {
+  background-color: transparent;
+  color: #001e1d;
+  text-align: left;
+  padding: 2px;
+}
+
+.entry-preview b {
+  background-color: transparent;
+  color: #001e1d;
+  text-align: left;
+  padding: 2px;
+}
+
+.entry-preview .entryValue {
+  background-color: #fffffe;
+  color: #001e1d;
+  border-radius: 5px;
+  border: 2px solid #001e1d;
+}
+
+.individualEntryButtons {
+  background-color: transparent;
 }

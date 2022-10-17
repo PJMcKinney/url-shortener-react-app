@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import EntryList from "./EntryList";
 
 const ViewAllEntries = () => {
   const [allEntries, setAllEntries] = useState([]);
@@ -18,12 +19,18 @@ const ViewAllEntries = () => {
   };
 
   return (
-    <div>
-      <h2>All URLs: </h2>
-      <form onSubmit={handleViewAllUrlSubmit}>
-        <button>View updated list of URLs</button>
-        <p align="centre">{JSON.stringify(allEntries)}</p>
-      </form>
+    <div className="viewAllEntries">
+      <div className="header">
+        <h2>All URLs</h2>
+        <div className="allEntriesButton">
+          <button onClick={handleViewAllUrlSubmit}>
+            View updated list of URLs
+          </button>
+        </div>
+      </div>
+      <div className="content">
+        <EntryList entries={allEntries} />
+      </div>
     </div>
   );
 };

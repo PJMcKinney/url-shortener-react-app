@@ -1,12 +1,15 @@
-import "./App.css";
 import LongUrlEntry from "./LongUrlEntry";
+import Navbar from "./Navbar";
 import ViewAllEntries from "./ViewAllEntries";
 
 function App() {
   return (
     <div className="App">
-      <LongUrlEntry />
-      <ViewAllEntries />
+      <Navbar />
+      <div className="content">
+        <LongUrlEntry />
+        <ViewAllEntries />
+      </div>
     </div>
   );
 }
