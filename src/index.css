@@ -122,6 +122,8 @@
   color: #001e1d;
   text-align: left;
   padding: 2px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .entry-preview b {
