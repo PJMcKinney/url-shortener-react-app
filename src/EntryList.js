@@ -1,5 +1,17 @@
+import axios from "axios";
+
 const EntryList = (props) => {
   console.log(props);
+
+  const handleDeleteEntryButtonPress = (e, UUID) => {
+    e.preventDefault();
+
+    axios
+      .delete("http://localhost:8080/url/deleteURL/" + UUID)
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="entry-list">
@@ -17,7 +29,12 @@ const EntryList = (props) => {
           </p>
           <div className="individualEntryButtons">
             <button className="updateEntryButton">Update Entry</button>
-            <button className="deleteEntryButton">Delete Entry</button>
+            <button
+              className="deleteEntryButton"
+              onClick={(e) => handleDeleteEntryButtonPress(e, entry.id)}
+            >
+              Delete Entry
+            </button>
           </div>
         </div>
       ))}
