@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #004643;
+  background-color: #004643;
 }
 
 .navbar {
@@ -120,7 +120,7 @@ body {
   background-color: #abd1c6;
 }
 
-.entry-preview p {
+.entry-preview .entryValue {
   background-color: transparent;
   color: #001e1d;
   text-align: left;
@@ -172,35 +172,31 @@ body {
 }
 
 .shortUrlDisplay {
-    background-color: #abd1c6;
-    display: flex
+  background-color: #abd1c6;
+  display: flex;
 }
 
 .returnShortUrl button {
-    content: center;
-    margin-left: auto;
+  content: center;
+  margin-left: auto;
 }
 
-.longUrlEntry .shortUrlDisplay{
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background-color: #abd1c6;
-    display: flex;
+.longUrlEntry .shortUrlDisplay {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #abd1c6;
+  display: flex;
 }
 
-.longUrlEntry .shortUrlDisplay p{
-    background-color: #fffffe;
-    border-radius: 5px;
-    border-color: #001e1d;
-    content: center;
-    padding: 8px;
-    height: 100%;
-    width: 100%;
-    color: #001e1d;
-    margin: auto;
-}
-
-.longUrlEntry .shortUrlDisplay button{
-    margin: auto;
+.longUrlEntry .shortUrlDisplay p {
+  background-color: #fffffe;
+  border-radius: 5px;
+  border-color: #001e1d;
+  content: center;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+  color: #001e1d;
+  margin: auto;
 }
