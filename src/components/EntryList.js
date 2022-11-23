@@ -1,13 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import UpdateModal from "./UpdateModal";
+import { Snackbar } from "@mui/material"
+import { bgcolor, color } from "@mui/system";
 
 
 const EntryList = (props) => {
 
   const [reload, setReload] = useState(false);
   const [open, setOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+  const handleSnackbar = () => {
+    setSnackbarOpen(true);
+  };
+  
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setSnackbarOpen(false);
+  };
   const handleDeleteEntryButtonPress = (e, UUID) => {
 
     axios
@@ -44,7 +58,7 @@ const EntryList = (props) => {
         <div className="entry-preview" key={entry.id}>
           <UpdateModal open={open} handleOpen={setOpen} entry={entry}/>
             <b>Long URL</b> <div className="entryValue">{entry.longURL}</div>
-            <b>Short URL</b> <div className="shortUrlEntryValue">http://localhost:8080/url/{entry.shortURL}</div>
+            <b>Short URL</b> <div id="shortUrlEntryValue" className="shortUrlEntryValue">http://localhost:8080/url/{entry.shortURL}</div>
             <b>Created</b>
             <div className="entryValue">{entry.createdAt}</div>
           <div className="individualEntryButtons">
@@ -65,6 +79,7 @@ const EntryList = (props) => {
               className="copyToClipboardEntryShortURL"
               onClick={() => {
                 copyElementText("shortUrlEntryValue");
+                handleSnackbar();
               }}
             >
               Copy to Clipboard
@@ -72,6 +87,13 @@ const EntryList = (props) => {
           </div>
         </div>
       ))}
+
+      <Snackbar
+          open={snackbarOpen}
+          autoHideDuration={6000}
+          onClose={handleClose}
+          message="Copied to Clipboard"
+        />
     </div>
   );
 };
