@@ -4,7 +4,10 @@
   margin: 0;
   font-family: "Roboto";
   color: #fffffe;
-  background-color: #004643;
+}
+
+body {
+    background-color: #004643;
 }
 
 .navbar {
@@ -142,4 +145,62 @@
 
 .individualEntryButtons {
   background-color: transparent;
+}
+
+.update-url-form input {
+  background-color: #fffffe;
+  border-radius: 5px;
+  border-color: #001e1d;
+  content: center;
+  padding: 5px;
+  width: 100%;
+  color: #001e1d;
+}
+
+.update-url-form button {
+  background-color: #f9bc60;
+  color: #001e1d;
+  border-color: #001e1d;
+  border-radius: 5px;
+}
+
+.update-url-form {
+  background-color: #abd1c6;
+  content: left;
+  display: flex;
+  padding: 20px;
+}
+
+.shortUrlDisplay {
+    background-color: #abd1c6;
+    display: flex
+}
+
+.returnShortUrl button {
+    content: center;
+    margin-left: auto;
+}
+
+.longUrlEntry .shortUrlDisplay{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #abd1c6;
+    display: flex;
+}
+
+.longUrlEntry .shortUrlDisplay p{
+    background-color: #fffffe;
+    border-radius: 5px;
+    border-color: #001e1d;
+    content: center;
+    padding: 8px;
+    height: 100%;
+    width: 100%;
+    color: #001e1d;
+    margin: auto;
+}
+
+.longUrlEntry .shortUrlDisplay button{
+    margin: auto;
 }
