@@ -33,16 +33,10 @@ const EntryList = (props) => {
       {props.entries.map((entry) => (
         <div className="entry-preview" key={entry.id}>
           <UpdateModal open={open} handleOpen={setOpen} entry={entry}/>
-          <p>
             <b>Long URL</b> <div className="entryValue">{entry.longURL}</div>
-          </p>
-          <p>
             <b>Short URL</b> <div className="entryValue">{entry.shortURL}</div>
-          </p>
-          <p>
             <b>Created</b>
             <div className="entryValue">{entry.createdAt}</div>
-          </p>
           <div className="individualEntryButtons">
         <button className="updateEntryButton" onClick={(e) => handleUpdateEntryButtonPress(e, entry)}>
               Customise Shortened URL
@@ -52,7 +46,8 @@ const EntryList = (props) => {
               onClick={(e) => {
                 handleDeleteEntryButtonPress(e, entry.id);
                 props.handleCount();
-                console.log("clicked")
+                window.location.reload();
+                console.log("clicked");
               }}
             >
               Delete Entry

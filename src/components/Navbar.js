@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>URL Shortener</h1>
       <div className="links">
-        <h3>John Dow</h3>
+        <h3>John Doe</h3>
       </div>
     </nav>
   );
