@@ -28,13 +28,23 @@ const EntryList = (props) => {
     setOpen(true);
   };
 
+  function copyElementText(id) {
+    var text = document.getElementById(id).innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+}
+
   return (
     <div className="entry-list">
       {props.entries.map((entry) => (
         <div className="entry-preview" key={entry.id}>
           <UpdateModal open={open} handleOpen={setOpen} entry={entry}/>
             <b>Long URL</b> <div className="entryValue">{entry.longURL}</div>
-            <b>Short URL</b> <div className="entryValue">{entry.shortURL}</div>
+            <b>Short URL</b> <div className="shortUrlEntryValue">http://localhost:8080/url/{entry.shortURL}</div>
             <b>Created</b>
             <div className="entryValue">{entry.createdAt}</div>
           <div className="individualEntryButtons">
@@ -46,11 +56,18 @@ const EntryList = (props) => {
               onClick={(e) => {
                 handleDeleteEntryButtonPress(e, entry.id);
                 props.handleCount();
-                window.location.reload();
                 console.log("clicked");
               }}
             >
               Delete Entry
+            </button>
+            <button
+              className="copyToClipboardEntryShortURL"
+              onClick={() => {
+                copyElementText("shortUrlEntryValue");
+              }}
+            >
+              Copy to Clipboard
             </button>
           </div>
         </div>

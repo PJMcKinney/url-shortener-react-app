@@ -89,7 +89,7 @@ body {
 }
 
 .longUrlEntry form button {
-  margin-left: auto;
+  margin-left: 5px;
 }
 
 .viewAllEntries {
@@ -120,11 +120,26 @@ body {
   background-color: #abd1c6;
 }
 
-.entry-preview .entryValue {
-  background-color: transparent;
+.shortUrlEntryValue {
+  background-color: #fffffe;
   color: #001e1d;
-  text-align: left;
-  padding: 2px;
+  border-radius: 5px;
+  border: 2px solid #001e1d;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.entryValue {
+  background-color: #fffffe;
+  color: #001e1d;
+  border-radius: 5px;
+  border: 2px solid #001e1d;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -145,6 +160,17 @@ body {
 
 .individualEntryButtons {
   background-color: transparent;
+  padding-top: 5px;
+}
+
+.deleteEntryButton {
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.updateEntryButton {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .update-url-form input {
@@ -199,4 +225,13 @@ body {
   width: 100%;
   color: #001e1d;
   margin: auto;
+}
+
+.copyToClipboardButton {
+  margin-left: 5px;
+}
+
+.copyToClipboardEntryShortURL {
+  margin-left: 5px;
+  padding: 5px;
 }
